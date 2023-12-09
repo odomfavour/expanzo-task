@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../public/logo-expanzo-black.svg";
 const HeroSection = () => {
+  const [activeTab, setActiveTab] = useState("all");
   return (
     <section className="mb-24">
       <div className="text-center flex justify-center items-center text-black mb-6">
@@ -9,13 +10,30 @@ const HeroSection = () => {
       </div>
       <div className="flex items-center justify-center">
         <div className="flex gap-6 items-center">
-          <button className="py-3 md:px-10 px-3 border-b-2 border-green-500 text-black font-semibold">
+          <button
+            className={`${
+              activeTab === "all" ? "border-green-500" : "border-transparent"
+            } hover:border-green-500 py-3 md:px-10 px-3 border-b-2 text-black font-semibold`}
+            onClick={() => setActiveTab("all")}
+          >
             All
           </button>
-          <button className="p-3 text-black border-b-2 border-transparent hover:border-green-500 font-semibold">
+          <button
+            className={`${
+              activeTab === "companies"
+                ? "border-green-500"
+                : "border-transparent"
+            } hover:border-green-500 py-3 md:px-10 px-3 border-b-2 text-black font-semibold`}
+            onClick={() => setActiveTab("companies")}
+          >
             Companies
           </button>
-          <button className="p-3 text-black border-b-2 border-transparent hover:border-green-500 font-semibold">
+          <button
+            className={`${
+              activeTab === "phones" ? "border-green-500" : "border-transparent"
+            } hover:border-green-500 py-3 md:px-10 px-3 border-b-2 text-black font-semibold`}
+            onClick={() => setActiveTab("phones")}
+          >
             Phones
           </button>
         </div>
