@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="py-2 bg-[#139577]">
       <div className="w-11/12 mx-auto">
-        <div className="flex justify-between">
+        <div className="flex md:flex-row flex-col-reverse gap-6 justify-between">
           <ul className="flex items-center gap-4">
             <li>
               <FaBars className="text-white text-2xl" />
@@ -34,7 +34,7 @@ const Header = () => {
             </div>
           )}
 
-          <ul className="flex gap-2">
+          <ul className="md:flex gap-2 hidden">
             <li>
               <Link
                 href="#"

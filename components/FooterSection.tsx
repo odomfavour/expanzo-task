@@ -6,8 +6,8 @@ import Link from "next/link";
 const FooterSection = () => {
   return (
     <div className="bg-gray-100 py-14">
-      <div className="w-8/12 mx-auto">
-        <div className="flex items-center justify-between ">
+      <div className="md:w-8/12 w-11/12 mx-auto">
+        <div className="flex md:flex-row flex-col items-center justify-between gap-6">
           <Image src={logo} alt="Expanzo Logo" width={180} height={40} />{" "}
           <ul className="flex gap-6">
             <li>
